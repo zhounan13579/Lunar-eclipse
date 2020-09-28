@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>月食</title>
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          background-color: #000;
+        }
+        .moonback{
+          width: 600px;
+          height: 600px;
+          background-color: #000;
+          margin: 0 auto;
+          position: relative;
+        }
+        .moonback::before{
+          content: ",";
+          display: block;
+          position: absolute;
+          left: 200px;
+          top: 100px;
+          width: 200px;
+          height: 200px;
+          background-color: #ff0;
+          border-radius: 100px;
+        }
+        .moonback::after{
+          content: " ";
+          display: block;
+          position: absolute;
+          left: 26px;
+          top: 0px;
+          width: 200px;
+          height: 200px;
+          background-color: #000;
+          border-radius: 100px;
+          -webkit-animation: 12s moon linear infinite;
+          -moz-animation: 12s moon linear infinite;
+          animation: 12s moon linear infinite;
+          -webkit-animation-fill-mode: forwards;
+          -moz-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+        }
+        @-webkit-keyframes moon {
+          0% {
+            left:27px;
+            top: 0px;
+          }
+          100% {
+            left: 399px;
+            top: 216px;
+          }
+        }
+        @-moz-keyframes moon {
+          0% {
+            left:27px;
+            top: 0px;
+          }
+          100% {
+            left: 399px;
+            top: 216px;
+          }
+        }
+        @keyframes moon {
+          0% {
+            left:27px;
+            top: 0px;
+          }
+          100% {
+            left: 399px;
+            top: 216px;
+          }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="moonback">
+      </div>
+    </div>
+  </body>
+</html>
